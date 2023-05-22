@@ -1,0 +1,22 @@
+{
+  "name": "css",
+  "version": "1.0.0",
+  "description": "css practic",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/BBQuality/css.git"
+  },
+  "keywords": [
+    "css"
+  ],
+  "author": "bbq",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BBQuality/css/issues"
+  },
+  "homepage": "https://github.com/BBQuality/css#readme"
+}
