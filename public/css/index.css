@@ -1,0 +1,55 @@
+html {
+  max-width: 1600px;
+}
+
+body {
+  background: black;
+}
+
+li:first-child {
+  color: yellow;
+}
+
+li:last-child {
+  color: blue;
+}
+
+li:only-child {
+  color: black;
+}
+
+.item:only-child {
+  color: black;
+}
+
+.item:first-child {
+  color: blue;
+}
+
+p:first-of-type {
+  color: white;
+}
+
+p:last-of-type {
+  color: red;
+}
+
+h1 {
+  color: green;
+}
+
+.card-dark {
+  background: grey;
+}
+
+.item {
+  color: red;
+}
+
+.item-first {
+  color: white;
+}
+
+.item:first-child {
+  color: orange;
+}
