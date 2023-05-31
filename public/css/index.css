@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  background: black;
+  background: red;
 }
 
 li:first-child {
@@ -42,6 +42,10 @@ h1 {
   background: grey;
 }
 
+.card-light {
+  background: white;
+}
+
 .item {
   color: red;
 }
@@ -52,4 +56,92 @@ h1 {
 
 .item:first-child {
   color: orange;
+}
+
+.input-dark {
+  background: grey;
+}
+
+.text-af::after {
+  color: white;
+  content: 'Byebye:(';
+}
+
+.input-dark[required] {
+  background: yellow;
+}
+
+.input-dark[type="number"] {
+  background: green;
+}
+
+.input-dark::placeholder {
+  background: blue;
+  color: red;
+}
+
+.input-be::before {
+  background: dark;
+  color: white;
+  content: 'Hello everybody';
+}
+
+.text-be::before {
+  background: dark;
+  color: white;
+  content: 'Hello everybody';
+}
+
+.small-image[alt~="pic"] {
+  width: auto;
+  max-width: 200px;
+}
+
+.small-image[alt|="sizes"] {
+  width: auto;
+  max-width: 200px;
+}
+
+.card[class~="col"] {
+ background: yellow;
+}
+
+a[rel~="external"]>h1{
+  color: white;
+}
+
+button[class^="nav-link"] {
+  color: yellow;
+}
+
+a[rel*="external"]>h1{
+  color: red;
+}
+
+div[class$="ltr"]>p{
+  background: green;
+}
+
+div[class|="work"]>p {
+  background: blue;
+}
+
+.letter::first-letter {
+  font-size: 48px;
+  color: white;
+}
+
+.btn::first-letter {
+  font-size: 48px;
+  color: white;
+}
+
+.line::first-line {
+  font-size: 48px;
+  color: grey;
+}
+
+.line::last-line {
+  font-size: 48px;
+  color: green;
 }
