@@ -1,0 +1,83 @@
+.card>p {
+  color: #32AABA;
+  text-align: start;
+}
+
+.card>span {
+  color: rgb(234, 345, 128);
+  text-align: center;
+}
+
+.card>h1 {
+  color: hsla(101, 89%, 193%, 0.5);
+  -webkit-text-fill-color: #4329AC;
+  -webkit-text-stroke: 1px blue;
+  text-align: end;
+}
+
+.card {
+  background-color: #FF0083;
+}
+
+h1:focus,
+h1:active,
+h1:hover {
+  -webkit-text-fill-color: #29AC36;
+  -webkit-text-stroke: 0.5px yellow;
+  direction: rtl;
+}
+
+#global {
+  color: initial;
+  -webkit-text-fill-color: initial;
+  -webkit-text-stroke: initial;
+}
+
+#inherit {
+  -webkit-text-fill-color: #DD80D9;
+  -webkit-text-stroke: 0.5px green;
+  direction: none;
+}
+
+#global {
+  color: unset;
+  -webkit-text-fill-color: inherit;
+  -webkit-text-stroke: inherit;
+}
+
+#inherit>p {
+  writing-mode: vertical-rl;
+  text-align: end;
+}
+
+#inherit>span {
+ writing-mode: vertical-lr;
+ text-align: center;
+}
+
+#inherit>em {
+  writing-mode: horizontal-tb;
+}
+
+#inherit>#global {
+  writing-mode: vertical-lr;
+  text-align: start;
+ }
+
+ #inherit>h2 {
+  text-align: justify;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-color: blue;
+ }
+
+ #inherit>#justify {
+  writing-mode: horizontal-tb;
+  letter-spacing: 2 em;
+  text-decoration: underline dotted red;
+ }
+pre {
+  tab-size: 100 px;
+  letter-spacing: 0.01 em;
+  text-transform: uppercase;
+ }
