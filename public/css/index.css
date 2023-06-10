@@ -145,3 +145,97 @@ div[class|="work"]>p {
   font-size: 48px;
   color: green;
 }
+
+a[href*="#"] {
+  color: red;
+}
+
+#test:target {
+  color: red;
+}
+
+.link:link {
+  color: red;
+}
+
+.link:hover {
+  color: yellow;
+}
+
+#hover:hover {
+  background: green; 
+}
+
+a[href*="#active"]:active {
+  color: blue;
+}
+
+input {
+  background-color: blue;
+}
+
+input:focus {
+  background-color: red;
+}
+
+#within:focus-within {
+  background-color: blue;
+}
+
+.card:lang(en)>span::after {
+  content: '(en)';
+}
+
+#button>button {
+  color: green;
+}
+
+#button>button:disabled {
+  background-color: green;
+  color: white;
+}
+
+.inp:read-write {
+  background-color: green;
+}
+
+.inp:read-only {
+  background-color: yellow;
+}
+
+input[type="checkbox"]:checked ~ span {
+  background-color: red;
+}
+
+.valid:valid {
+  background: green;
+}
+
+.valid:invalid {
+  background: red;
+}
+
+.valid:optional {
+  background: blue;
+}
+
+.number:focus {
+  background: grey;
+}
+
+.number:out-of-range {
+  background: red;
+}
+
+.number:in-range {
+  background: green;
+}
+
+
+input:placeholder-shown {
+  background-color: white;
+}
+
+input:placeholder-shown ~ span {
+  color: white;
+}
