@@ -1,3 +1,33 @@
+* { 
+  font-family: 'Comfortaa', cursive, 'Playfair Display', serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+.block {
+  display: block;
+  
+}
+
+.inline-block>span {
+  display: inline-block;
+  margin: auto;
+  width: 250px;
+}
+
+main>span {
+  text-align: start;
+}
+
+span {
+  font-size: larger;
+  font-weight: lighter;
+  font-style: oblique;
+  font-stretch: expanded;
+}
+
 .card>p {
   color: #32AABA;
   text-align: start;
@@ -25,6 +55,7 @@ h1:hover {
   -webkit-text-fill-color: #29AC36;
   -webkit-text-stroke: 0.5px yellow;
   direction: rtl;
+  font-style: italic;
 }
 
 #global {
