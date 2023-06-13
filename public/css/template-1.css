@@ -64,14 +64,14 @@
 
 .footer_copyright {
     font-size: 14px;
-    text-color: #6C757D;
+    color: #6C757D;
     display: block;
     margin-top: 12px;
 }
 
 .footer_title {
     font-size: 20px;
-    text-color: #212529;
+    color: #212529;
     display: block;
     margin-bottom: 12px;
 }
@@ -102,7 +102,7 @@ margin: 0 auto;
     padding: 12px;
     text-align: center;
     font-size: 24px;
-    text-color: #212529;
+    color: #212529;
 }
 
 .card-body {
@@ -120,14 +120,14 @@ margin: 0 auto;
 .card_price_amount {
     font-weight: 500;
 font-size: 40px;
-text-color: #212529;
+color: #212529;
 }
 
 .card_price_duration {
     font-style: normal;
     font-weight: 400;
     font-size: 29px;
-    text-color: #6C757D;
+    color: #6C757D;
 }
 
 .card_description_item {
