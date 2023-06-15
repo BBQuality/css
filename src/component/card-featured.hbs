@@ -1,12 +1,14 @@
-    {{#with data}}
+
     <div class="card">
+      
         <div class="card_image" style="background-image: url({{img}});"></div>
         <h2 class="card_title">
             {{title}}
         </h2>
+        <div class="card_description">
         <p class="card_text">
             {{text}}
-        </p>
+        </p></div>
         <a class="card_button" href="{{href}}" alt="{{title}}">{{button}}</a>
+    
     </div>
-    {{/with}}
