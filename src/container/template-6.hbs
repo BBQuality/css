@@ -1,0 +1,105 @@
+            <header class="header">
+                <div class="">    
+                   {{> logo}}
+                </div>
+           
+                <nav class="header_nav">
+                    <div class="header_nav_right">
+                      {{> nav list=header}}
+                    </div>
+                 </nav>
+             </header>
+    <main class="main">
+        {{#with info}}
+        <div class="hero_info">
+            <div class="info_title">
+                {{title}}
+            </div>
+             <div class="info_description">
+                {{description}}
+            </div>
+        </div>
+        {{/with}}
+        <div class="form">
+            {{#with form}} 
+            <div class="input_list">
+                <div class="input_gap">
+            {{#each inputs}}
+            <input id="{{id}}" namw="{{name}}" type="{{type}}" placeholder="{{placeholder}}">
+            {{/each}}
+             </div>
+            <div class="form_checkbox">
+             <input type="checkbox" id="{{checkbox.name}}" name="{{checkbox.name}}">
+            <div></div>
+             <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+            </div>
+            <button type="submit" class="form_button">{{button}}</button>
+           
+           </div> 
+           <p class="form_info">{{info}}</p>
+           {{/with}}
+        </div>
+
+    </main>
+
+    <div class="messeges">
+       {{#with updates}}
+       <h1 class="messages_title">
+        {{title}}
+       </h1>
+
+{{#each list}}
+    <div class="msg">    
+         <div class="msg_icon">
+            
+        </div>
+        <div class="post">
+        <strong class="msg_name">
+            {{nickname}}
+        </strong>
+        <p class="msg_message">
+            {{description}}
+        </p>
+   </div>
+    </div>
+{{/each}}
+     {{#with show_all}}
+       <a href="{{url}}" title="All messages" class="messages_link">{{text}}</a>
+       {{/with}}
+       {{/with}}
+    </div>
+
+{{#with expirience}}
+<div class="expirience"> 
+    <div class="exp_title">
+        <h1>{{title}}</h1>
+    </div>
+    
+    <div class="exp_card">
+    {{#each list}}
+        <div>
+           <strong>{{name}}</strong>
+            <p>{{details}}</p>
+        </div>
+        {{/each}}
+        </div>
+</div>
+{{/with}}
+         <footer class="footer">
+            <div>
+                {{> logo}}
+                <span class="footer_copyright">
+                    Copyright 2023-2024
+                    </span>
+            </div>
+            {{#each footer}}
+            <div>
+               <span class="footer_title">
+                {{title}}
+                </span>
+                {{> nav list=links isVertical=true}}
+            </div>
+           {{/each}}
+         </footer>
+
+

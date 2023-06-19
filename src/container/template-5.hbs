@@ -1,0 +1,84 @@
+            <header class="header">
+                <div class="">    
+                   {{> logo}}
+                </div>
+           
+                <nav class="header_nav">
+                    <div class="header_nav_right">
+                      {{> nav list=header}}
+                    </div>
+                 </nav>
+             </header>
+
+<main class="main">
+    <div class="messeges">
+       {{#with messages}}
+       <h1 class="messages_title">
+        {{title}}
+       </h1>
+
+{{#each list}}
+    <div class="msg">
+        <strong class="msg_name">
+            {{name}}
+        </strong>
+        <p class="msg_message">
+            {{message}}
+        </p>
+        <span class="msg_day">
+            {{day}}
+        </span>
+    </div>
+{{/each}}
+
+       <a href="#" title="All messages" class="messages_link">All messages</a>
+       {{/with}}
+    </div>
+    {{#with form}}
+    <div class="form">
+    <h2 class="form_title">
+        {{title}}
+    </h2>
+    <div class="input_list">
+    {{#each inputs}}
+    <input class="form_input" id="form-input-{{id}}" name="{{name}}" placeholder="{{placeholder}}" type="{{type}}">
+    {{/each}}
+    </div>
+    <button type="submit" class="form_button">{{button}}</button>
+    <div class="form_checkbox">
+    <input type="checkbox" id="{{checkbox.name}}" name="{{checkbox.name}}">
+    <div></div>
+    <label for="{{checkbox.name}}">{{checkbox.label}}</label>
+    </div>
+    <p class="form_info">{{info}}</p>
+    </div>
+    {{/with}}
+</main>
+
+<div class="advantages">
+    {{#each advantages}}
+        <div>
+            <strong>{{title}}</strong>
+            <p>{{text}}</p>
+        </div>
+        {{/each}}
+</div>
+
+         <footer class="footer">
+            <div>
+                {{> logo}}
+                <span class="footer_copyright">
+                    Copyright 2023-2024
+                    </span>
+            </div>
+            {{#each footer}}
+            <div>
+               <span class="footer_title">
+                {{title}}
+                </span>
+                {{> nav list=links isVertical=true}}
+            </div>
+           {{/each}}
+         </footer>
+
+
