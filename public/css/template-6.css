@@ -104,7 +104,7 @@
 
 .footer_title {
     font-size: var(--size-l);
-    text-color: var(--color-title);
+    color: var(--color-title);
     display: block;
     margin-bottom: var(--space-l);
 }

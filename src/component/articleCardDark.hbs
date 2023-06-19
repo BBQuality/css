@@ -1,0 +1,22 @@
+<div class="card_articles">
+    <div class="card_image">
+        <img src="{{photo}}" alt="{{name}}" class="image">
+         {{#if isNew}}
+        <div class="isNew">
+            <span>NEW</span>
+        </div>
+        {{/if}}
+    </div> 
+  
+    <div class="card_info">
+        <h5 class="card_title">
+            {{name}}
+        </h5>
+        <p class="card_text">
+            {{description}}
+        </p>
+        <div class="card_button">
+            <a value="{{id}}" href="#" class="card_link">Read All</a>
+        </div>
+    </div>
+</div>
