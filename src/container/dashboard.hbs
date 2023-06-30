@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>
+			Dashboard
+		</title>
+		<meta charset='utf-8' />
+        <meta name="viewport" content="viewport-fit=cover, width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<link href='/css/normalize.css' rel='stylesheet'/>
+		<link href='/css/dashboard.css' rel='stylesheet'/>
+		<link rel="apple-touch-icon" sizes="180x180" href="/fav/apple-touch-icon.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/fav/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/fav/favicon-16x16.png">
+		<link rel="manifest" href="/fav/site.webmanifest">
+	</head>
+
+	<body>
+
+       <div class="page page--dashboard">
+        <aside class="page_aside aside vertical">
+			{{#with aside}}
+			<div class="aside_logo">
+				{{logo}}
+			</div>
+			<nav class="vertical vertical_small">
+				{{#each nav}}
+				<a href="#" class="nav_button nav_button_active click">
+					<span class="icon nav_button_icon" style="background-image: url('{{img}}');">
+
+					</span>						
+					<span class="text text_light text_line">
+							{{text}}
+					</span>
+				</a>
+				{{/each}}
+			</nav>
+			{{/with}}
+		</aside>
+        <div class="header">
+	{{#with header}}
+			<div class="layout header_content text_small">
+				{{#with input}}
+				<div class="header_search">
+						<input type="text" class="field field_header" placeholder="{{placeholder}}">
+						<span class="icon_header_search" style="background-image: url('{{icon_search}}');"></span>
+						<span class="icon_header_settings" style="background-image: url('{{icon_settings}}');"></span>
+				</div>
+				{{/with}}
+				<div class="icon_bar">
+					{{#each bar}}
+					<a href="#" class="bar_button nav_button_active click" style="background-color: var({{color}});">
+						<span class="icon bar_icon" style="background-image: url('{{icon}}');"></span>
+					</a>
+					{{/each}}
+				</div>
+			</div>
+{{/with}}
+		</div>
+
+
+        <div class="main">
+			<div class="layout">
+
+				<div class="main_content">
+					<section class="box analitic_block">
+					<div class="analitic analitic_double analitic_purple vertical_big">
+						<span class="icon analitic_button icon_button icon_color_purple click" style="background-image: url('/dash/box/cash.png');"></span>
+						<div class="analitic_content_vertical">
+								<div class="analitic_title text text_light">$500.00</div>
+								<div class="analitic_info text text_light_transparent">Total earning</div>
+								<span class="icon icon_button icon_color_purple_sky icon_arrow click" style="background-image: url('/dash/box/arrow.png');"></span>
+						</div>
+					</div>
+					<div class="analitic analitic_double analitic_blue vertical_big">
+						<span class="icon analitic_button icon_button icon_color_blue click" style="background-image: url('/dash/box/pocket.png');"></span>
+						<div class="analitic_content_vertical">
+							<div class="analitic_title text text_light">$961</div>
+							<div class="analitic_info text text_light_transparent">Total Order</div>
+						</div>
+					</div>
+					<div class="analitic analitic_content_horizontal analitic_blue">
+						<span class="icon analitic_button icon_button icon_color_blue click" style="background-image: url('/dash/box/cash.png');"></span>
+						<div class="analitic_content_vertical_horizontal">
+							<div class="analitic_title_horizontal text text_light text_bold">$203k</div>
+							<div class="analitic_info text text_light_transparent">Total Income</div>
+						</div>
+					</div>
+					<div class="analitic analitic_content_horizontal analitic_white">
+							<span class="icon analitic_button icon_button icon_color_yellow click" style="background-image: url('/dash/box/total.png');"></span>
+						<div class="analitic_content_vertical_horizontal">
+							<div class="analitic_title_horizontal text text_dark text_bold">$203k</div>
+							<div class="analitic_info text text_grey">Total Income</div>
+						</div>
+					</div>
+					</section>
+
+					<section class="story_block">
+					<div class="box purchase">
+						{{#with purchase}}
+						<div class="text purchase_title">
+							{{title}}
+						</div>
+						
+							{{#each cart}}
+					{{> divider}}
+						<div class="purchase_vertical">
+
+							<div class="user_info purchase_column text">
+								<div class="client_id">{{id}}</div>
+							
+								<div class="purchase_date">{{date}}</div>
+							</div>
+
+							<div class="product_info purchase_column ">
+								<div class="product_article text">{{article}}</div>
+								
+								<div class="product_type text">{{type}}</div>
+							</div>
+
+							<div class="payment_info purchase_column">
+								<div class="product_price">{{price}}</div>
+								
+								<div class="payment_status">
+								{{#if pay}}
+								<p class="success">Pay by  Stripe</p>
+								
+								{{else}}
+								<p class="defined">Not paid</p>
+								
+								{{/if}}
+								</div>	
+							</div>
+
+							<div class="contact_info purchase_column">
+								<div class="saller_position">{{position}}</div>
+								<div class="saller_contact">{{email}}</div>
+							</div>
+					
+						</div>
+						{{/each}}
+						{{/with}}
+					</div>
+					<div class="box payment payment_vertical">
+							{{#with payment}}
+
+					<div class="payment_header">
+						<div class="text payment_title">
+							{{title}}
+						</div>
+						{{> divider}}
+					</div>
+
+					<div class="payment_method">
+						{{#each method}}
+						 <div class="form_checkbox">
+             				<input type="checkbox" id="{{id}}" name="{{text}}">
+            			<div></div>
+             				<label for="{{id}}">{{text}}</label>
+           				 </div>
+						{{/each}}
+					</div>
+					<div class="card_info">
+						<div class="card_identity">
+							 {{#each form}}
+							<div class="card_holder card_text ">	
+								<label for="{{label}}">{{label}}</label>	           
+           						<input class="field card_field" id="{{id}}" name="{{label}}" type="{{type}}" placeholder="{{label}}">
+							</div> 
+							{{/each}}
+							
+						</div>
+						{{> divider}}
+					</div>
+
+					<div class="card_info">
+						<div class="card_identity">
+							 {{#each geo}}
+							<div class="card_holder card_geo_field card_text">
+
+								
+								
+								<label for="{{label}}">{{label}}</label>	           
+           						<input class="field card_field card_geo_field" id="{{id}}" name="{{label}}" type="{{type}}" placeholder="{{label}}">
+								
+								<div class="field field_select">
+									<span class="text text_dark">{{label}}</span>
+									<select class="field_select">
+										<option value="First">First</option>
+										<option value="Second">Second</option>
+										<option value="Third">Third</option>
+										<option value="Fourth">Fourth</option>
+										<option value="Fives">Fives</option>
+									</select>	
+								</div>
+							</div>
+							{{/each}}
+							
+						</div>
+						{{> divider}}
+					</div>
+
+					<div class="form_button">
+						<div class="nav_button button_success click">
+							<div class="text button_text">
+								Continue to checkout
+							</div>
+						</div>
+					</div>
+						{{/with}}
+
+					</div>
+					</section>
+				</div>
+
+			</div>
+		</div>
+       </div>
+
+	</body>
+
+</html>

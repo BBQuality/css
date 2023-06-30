@@ -75,9 +75,9 @@ pre {
  * Remove the gray background on active links in IE 10.
  */
 
-a {
+/* a {
     background-color: transparent;
-}
+} */
 
 /**
  * 1. Remove the bottom border in Chrome 57-
@@ -160,7 +160,7 @@ img {
  */
 
 button,
-input,
+/* input, */
 optgroup,
 select,
 textarea {
@@ -179,15 +179,16 @@ textarea {
  */
 
 button,
-input { /* 1 */
+/* input */
+ { /* 1 */
     overflow: visible;
 }
 
 /* Видалення дурного зовнішнього світіння в Webkit */
-input:focus
+/* input:focus
 {
     outline:0;
-}
+} */
 
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
@@ -383,7 +384,7 @@ input[type="submit"]
     background:none;
 }
 
-input,
+/* input, */
 label,
 select,
 button,
@@ -403,10 +404,10 @@ textarea
 }
 
 /* Remove the stupid outer glow in Webkit */
-input:focus
+/* input:focus
 {
     outline:0;
-}
+} */
 
 
 
@@ -447,11 +448,11 @@ input[type=radio]
 /* Make webkit render the search input like a normal text field */
 
 
-/* Turn off the recent search for webkit. It adds about 15px padding on the left */
+/* Turn off the recent search for webkit. It adds about 15px padding on the left
 ::-webkit-search-decoration
 {
     display:none;
-}
+} */
 
 /* Buttons
 -----------------------------------------------*/
@@ -510,13 +511,13 @@ main::-webkit-scrollbar {
   display: none !important;
 }
 
-a,
+/* a, */
 abbr,
 acronym,
 address,
 applet,
 article,
-aside,
+/* aside, */
 audio,
 b,
 big,
@@ -531,7 +532,7 @@ dd,
 del,
 details,
 dfn,
-div,
+/* div, */
 dl,
 dt,
 em,
@@ -570,7 +571,7 @@ q,
 ruby,
 s,
 samp,
-section,
+/* section, */
 small,
 span,
 strike,
@@ -612,7 +613,7 @@ header,
 hgroup,
 menu,
 nav,
-section {
+/* section */{ 
   display: block;
 }
 
@@ -720,7 +721,7 @@ legend {
 }
 
 button,
-input,
+/* input, */
 select,
 textarea {
   font-size: 100%;
@@ -730,7 +731,8 @@ textarea {
 }
 
 button,
-input {
+/* input */
+ {
   line-height: normal;
   padding: 0;
   border: 0;
@@ -775,7 +777,7 @@ input[type='search']::-webkit-search-decoration {
 }
 
 button::-moz-focus-inner,
-input::-moz-focus-inner {
+/* input::-moz-focus-inner  */{
   border: 0;
   padding: 0;
 }
@@ -792,7 +794,7 @@ table {
 
 button,
 html,
-input,
+/* input, */
 select,
 textarea {
   color: #222;
@@ -825,7 +827,7 @@ a:active,
 a:focus {
   outline: 0;
 }
-
+/* 
 input,
 textarea {
   outline: 0;
@@ -838,7 +840,7 @@ textarea:active {
 
 :focus {
   outline: 0;
-}
+} */
 
 textarea {
   resize: none;
@@ -889,7 +891,7 @@ button:focus {
   box-shadow: 0 0 0 0 rgba(0, 123, 255, 0);
 }
 
-input[placeholder] {
+/* input[placeholder] {
   text-overflow: ellipsis;
 }
 
@@ -909,13 +911,13 @@ input {
   background-color: inherit;
   background-image: inherit;
   color: inherit;
-}
+} */
 
 * {
   box-sizing: border-box;
 }
 
-input::-webkit-inner-spin-button,
+/* input::-webkit-inner-spin-button,
 input::-webkit-outer-spin-button {
   -webkit-appearance: none;
   margin: 0;
@@ -936,4 +938,4 @@ input[type='number'] {
 input:-webkit-autofill {
   -webkit-box-shadow: none;
   box-shadow: none;
-}
+} */

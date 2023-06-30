@@ -1,0 +1,57 @@
+
+ 
+        <section class="intro">
+            {{#with hero}}
+            <div class="intro_info">
+                <h2 class="intro_info_title">
+                    {{title}}
+                </h2>
+                <p class="intro_info_text">
+                    {{description}}
+                </p>
+                <div class="intro_info_button">
+                {{#with button}}
+                <a href="{{url}}" class="intro_button">
+                    {{text}}
+                </a>
+                {{/with}}
+                </div>
+            </div>
+            {{/with}}
+        </section>
+
+        <section class="about">
+            {{#with about}}
+            <div class="about_info">
+                <div class="about_info_title">
+                   <h4 class="title">
+                    {{heading}}
+                   </h4> 
+                </div>
+                <div class="about_info_text">
+                   <p class="text">
+                    {{info}}
+                   </p> 
+                </div>
+            </div>
+            {{/with}}
+        </section>
+
+        <main class="main">
+            <div class="main_head">
+                <div class="articles_head_title">
+                    <h1 class="main_head_title">Our articles</h1>
+                </div>
+                <div class="main_head_button">
+                    <button class="articles_button" type="button">View All</button>
+                </div>
+            </div>
+            <div class="articles_content">
+                {{#each articles}}
+                        {{> articleCardDark}}
+                {{/each}}
+            </div>
+        </main>
+
+
+
