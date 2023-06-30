@@ -1187,4 +1187,162 @@ router.get('/slack', function (req, res) {
 
 })
 
+router.get('/dashboard', function (req, res) {
+
+  res.render('dashboard', {
+    layout: null,
+    aside: {
+      logo: 'Sidebar',
+      nav: [
+      {
+        img: '/dash/home.png',
+        text: 'Home',
+      },
+      {
+        img: '/dash/table.png',
+        text: 'Orders',
+      },
+      {
+        img: '/dash/apps.png',
+        text: 'Products',
+      },
+    ],
+    },
+    header: {
+      input: {
+        placeholder: 'Search',
+        icon_search: '/dash/search.png',
+        icon_settings: '/dash/prefer.png',
+      },
+      bar: [
+        {
+          icon: '/dash/signal.png',
+          title: 'Signal',
+          color: '--color-yallow-light',
+        },
+        {
+          icon: '/dash/translate.png',
+          title: 'Translater',
+          color: '--color-blue-sky-icon',
+        },
+        {
+          icon: '/dash/ring.png',
+          title: 'Ringer',
+          color: '--color-yallow-light',
+        },
+      ],
+    },
+    main: {
+      box: [
+      {
+        color: 'var(--color-purple-light)',
+        title: 'Total earning',
+        cost: '500',
+        icon: '/dash/box/cash.png',
+        iconColor: 'var(--color-purple-dark)',
+        isArrow: true,
+        arrow: '/dash/box/arrow.png',
+        arrowColor: 'var(--color-purple-sky)',
+      },
+      {
+        color: 'var(--color-blue-light)',
+        title: 'Total Order',
+        cost: '961',
+        icon: '/dash/box/pocket.png',
+        iconColor: 'var(--color-blue-dark)',
+      },
+      {
+        color: 'var(--color-blue-light)',
+        title: 'Total Income',
+        cost: '203k',
+        icon: '/dash/box/cash.png',
+        iconColor: 'var(--color-blue-dark)',
+      },
+      {
+        color: 'var(--color-white)',
+        title: 'Total Income',
+        cost: '203k',
+        icon: '/dash/box/total.png',
+        iconColor: 'var(--color-yellow-dark)',
+      },
+    ],
+    },
+    purchase: {
+      title: 'Purchase list',
+      cart: [
+        {
+          id: 'ID437661',
+          date: 'May 11, 2023, 14:21',
+          article: 'AirOn ProCam',
+          type: '7/8 USB Type-C',
+          price: '132.32 EUR',
+          pay: false,
+          position: 'Customer',
+          email: 'robin@com.de',
+        },
+        {
+          id: 'ID437661',
+          date: 'May 11, 2023, 14:21',
+          article: 'PHILIPS Essential',
+          type: 'HD9200/90',
+          price: '543 USD',
+          pay: true,
+          position: 'Customer',
+          email: 'dima@com.ua',
+        },
+      ],
+    },
+    payment: {
+      title: 'Payment',
+      method: [
+        {
+          id: '1',
+          text: 'Credit card',
+        },
+        {
+          id: '2',
+          text: 'Debit card',
+        },
+        {
+          id: '3',
+          text: 'PayPal',
+        },
+      ],
+      form: [
+        {
+          id: '1',
+          label: 'Name on card',
+          type: 'text',
+        },
+        {
+          id: '2',
+          label: 'Credit card number',
+          typoe: 'number',
+        },
+        {
+          id: '3',
+          label: 'Expiration',
+          type: 'number',
+        },
+        {
+          id: '4',
+          label: 'CVV',
+          type: 'number',
+        },
+      ],
+      geo: [
+        {
+          id: '1',
+          label: 'Country',
+        },
+        {
+          id: '2',
+          label: 'State',
+        },
+      ],
+    }
+  })
+
+})
+
 module.exports = router
